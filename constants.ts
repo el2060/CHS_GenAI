@@ -138,6 +138,42 @@ export const SLIDES: SlideData[] = [
     ],
   },
   {
+    template: SlideTemplate.CardList,
+    title: 'Product Design',
+    chineseTitle: '产品设计',
+    icon: 'palette',
+    iconColor: '#EA4335',
+    cardItems: [
+      { title: 'Visualize', chineseTitle: '构想', text: 'Generate 5 sneaker designs inspired by the Gardens by the Bay Supertrees.', chineseText: '生成 5 款以滨海湾花园超级树为灵感的运动鞋设计。' },
+      { title: 'Describe', chineseTitle: '描述', text: "Write a compelling product description for a new 'Pandan-flavour' milk tea.", chineseText: '为一款新的“班兰味”奶茶撰写引人入胜的产品描述。' },
+      { title: 'Survey', chineseTitle: '调研', text: 'Create 10 survey questions for feedback on a new mobile app feature.', chineseText: '为新的手机应用功能设计 10 个用户反馈调查问题。' },
+    ],
+  },
+  {
+    template: SlideTemplate.CardList,
+    title: 'Public Relations',
+    chineseTitle: '公共关系',
+    icon: 'podcasts',
+    iconColor: '#5f6368',
+    cardItems: [
+      { title: 'Crisis Comms', chineseTitle: '危机公关', text: "Draft a sincere but funny apology for a customer who found a toy cockroach in their chicken rice.", chineseText: '为在鸡饭里发现玩具蟑螂的顾客草拟一份真诚又幽默的公开道歉信。' },
+      { title: 'Press Release', chineseTitle: '新闻稿', text: "Write a press release announcing a local kopi shop won 'Best Coffee in Asia'.", chineseText: '撰写一篇新闻稿，宣布一家本地咖啡店荣获“亚洲最佳咖啡”奖。' },
+      { title: 'Speechwriting', chineseTitle: '演讲稿', text: "Write a 1-minute opening speech for a CEO at a launch event.", chineseText: '为 CEO 在新品发布会上的开幕致辞撰写一份 1 分钟的演讲稿。' },
+    ],
+  },
+  {
+    template: SlideTemplate.CardList,
+    title: 'Legal & Compliance',
+    chineseTitle: '法务与合规',
+    icon: 'gavel',
+    iconColor: '#5f6368',
+    cardItems: [
+      { title: 'Simplify', chineseTitle: '简化', text: 'Summarize a complex PDPA document into 5 simple rules for new staff.', chineseText: '将一份复杂的个人数据保护法文件总结为 5 条给新员工的简单规则。' },
+      { title: 'Draft', chineseTitle: '草拟', text: 'Draft a simple Tenancy Agreement for a HDB room rental.', chineseText: '为组屋房间租赁草拟一份简单的租赁协议。' },
+      { title: 'Localize', chineseTitle: '本地化', text: "Translate a legal warning into Singlish: 'Eh, don't anyhow park here, later kena saman!'", chineseText: '将法律警告翻译成新加坡式英语：“喂，不要乱停车，等下中罚单！”' },
+    ],
+  },
+  {
     template: SlideTemplate.Title,
     title: '问 (wèn)',
     subtitle: 'Questions?',
