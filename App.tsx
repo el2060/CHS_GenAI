@@ -22,17 +22,27 @@ const renderFooterSpans = (text: string = "") => {
 // --- Slide Templates ---
 
 const TitleSlide: React.FC<{ slide: SlideData; slideIndex?: number }> = ({ slide, slideIndex }) => (
-  <div className="flex flex-col items-center justify-center text-center">
+  <div className="relative w-full h-full flex flex-col items-center justify-center text-center">
+    {/* Main content wrapper */}
+    <div className="flex flex-col items-center justify-center">
+      {slideIndex === 0 && (
+        <img
+          src="https://i.imgur.com/bioCfZA.png"
+          alt="Ngee Ann Polytechnic Logo"
+          className="h-20 w-auto mb-12"
+        />
+      )}
+      <h1 className="text-8xl font-medium m-0 text-text-primary">{slide.title}</h1>
+      <h2 className="text-5xl font-normal text-accent-blue mt-4">{slide.subtitle}</h2>
+      <p className="text-3xl text-text-secondary mt-2">{slide.chineseSubtitle}</p>
+    </div>
+    
+    {/* Footnote for the first slide */}
     {slideIndex === 0 && (
-      <img
-        src="https://www.moe.gov.sg/-/media/images/school-logos/post-secondary/ngee-ann-polytechnic.jpg?h=353&w=1274&hash=C05014A86C88B66446A2D9D4CF9FC62F"
-        alt="Ngee Ann Polytechnic Logo"
-        className="h-20 w-auto mb-12"
-      />
+      <div className="absolute bottom-0 text-center w-full">
+        <p className="text-lg text-text-secondary">6th Nov, 10AM, 56-06-01</p>
+      </div>
     )}
-    <h1 className="text-8xl font-medium m-0 text-text-primary">{slide.title}</h1>
-    <h2 className="text-5xl font-normal text-accent-blue mt-4">{slide.subtitle}</h2>
-    <p className="text-3xl text-text-secondary mt-2">{slide.chineseSubtitle}</p>
   </div>
 );
 
