@@ -74,7 +74,7 @@ export const SLIDES: SlideData[] = [
     cardItems: [
       { title: 'Brainstorm', chineseTitle: '构思', text: "Viral TikTok ideas for LiHO TEA's new drink.", chineseText: '为「LiHO TEA」的新饮品构思病毒式传播的 TikTok 创意。' },
       { title: 'Write', chineseTitle: '撰写', text: "Instagram captions for Shopee's 11.11 sale.", chineseText: '为 Shopee 的 11.11 促销撰写 Instagram 标题。' },
-      { title: 'Target', chineseTitle: '定位', text: 'Ads for NP students vs. their parents.', chineseText: '为 NP 学生和他们的家长制作不同的定向广告。' },
+      { title: 'Target', chineseTitle: '定位', text: "Targeting ads based on search history: 'Instant noodle deals' for students searching 'exam stress' vs. 'Chicken essence' for parents searching 'how to help my child study'.", chineseText: '根据搜索历史投放广告：向搜索“考试压力”的学生推送“方便面优惠”，向搜索“如何帮助孩子学习”的家长推送“鸡精”。' },
     ],
   },
   {
