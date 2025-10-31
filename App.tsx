@@ -53,8 +53,8 @@ const TitleSlide: React.FC<{ slide: SlideData; slideIndex?: number }> = ({ slide
             </div>
             {isFirstSlide && (slide.footer || slide.chineseFooter) && (
                 <div className="absolute bottom-8 text-center w-full">
-                    <p className="text-xl text-muted-foreground fade-in" style={{ animationDelay: '1.6s' }}>{slide.footer}</p>
-                    <p className="text-lg text-muted-foreground/80 fade-in mt-1" style={{ animationDelay: '1.7s' }}>{slide.chineseFooter}</p>
+                    {slide.footer && <p className="text-xl text-muted-foreground fade-in" style={{ animationDelay: '1.6s' }}>{slide.footer}</p>}
+                    {slide.chineseFooter && <p className={`text-lg text-muted-foreground/80 fade-in ${slide.footer ? 'mt-1' : ''}`} style={{ animationDelay: '1.7s' }}>{slide.chineseFooter}</p>}
                 </div>
             )}
         </div>

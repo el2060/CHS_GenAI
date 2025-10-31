@@ -6,7 +6,6 @@ export const SLIDES: SlideData[] = [
     title: 'AI Transformation for Business',
     subtitle: '生成式 AI 商业应用',
     chineseSubtitle: 'Hands-on Workshop — Diploma in CHS',
-    footer: 'Ngee Ann Polytechnic',
     chineseFooter: '6 Nov, 10AM · 56-06-01',
   },
   {
