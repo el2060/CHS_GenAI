@@ -4,6 +4,7 @@ export enum SlideTemplate {
   Comparison = 'Comparison',
   Diagram = 'Diagram',
   CardList = 'CardList',
+  InfographicSummary = 'InfographicSummary',
 }
 
 export interface ThreeColumnItem {
@@ -31,6 +32,30 @@ export interface CardListItem {
   chineseText?: string;
 }
 
+export interface InfographicSectionItem {
+  icon: string;
+  iconColor?: string;
+  text: string;
+  chineseText: string;
+}
+
+export interface InfographicSection {
+  title: string;
+  chineseTitle: string;
+  items: InfographicSectionItem[];
+}
+
+export interface InfographicApplication {
+    icon: string;
+    name: string;
+}
+
+export interface WorkflowStep {
+  icon: string;
+  label: string;
+  chineseLabel: string;
+}
+
 export interface SlideData {
   template: SlideTemplate;
   title?: string;
@@ -44,4 +69,7 @@ export interface SlideData {
   chineseFooter?: string;
   icon?: string;
   iconColor?: string;
+  infographicSections?: InfographicSection[];
+  applications?: InfographicApplication[];
+  workflow?: WorkflowStep[];
 }

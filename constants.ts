@@ -3,9 +3,11 @@ import { SlideData, SlideTemplate } from './types';
 export const SLIDES: SlideData[] = [
   {
     template: SlideTemplate.Title,
-    title: 'AI 变局',
-    subtitle: 'Generative AI for Business',
-    chineseSubtitle: '生成式 AI 的商业应用',
+    title: 'AI Transformation for Business',
+    subtitle: '生成式 AI 商业应用',
+    chineseSubtitle: 'Hands-on Workshop — Diploma in CHS',
+    footer: 'Ngee Ann Polytechnic',
+    chineseFooter: '6 Nov, 10AM · 56-06-01',
   },
   {
     template: SlideTemplate.ThreeColumnIcon,
@@ -174,9 +176,53 @@ export const SLIDES: SlideData[] = [
     ],
   },
   {
-    template: SlideTemplate.Title,
-    title: '问 (wèn)',
-    subtitle: 'Questions?',
-    chineseSubtitle: '有问题吗？'
+    template: SlideTemplate.InfographicSummary,
+    title: 'Generative AI at a Glance',
+    chineseTitle: '生成式 AI 概览',
+    infographicSections: [
+      {
+        title: 'Core Capabilities & Functions',
+        chineseTitle: '核心功能',
+        items: [
+          { icon: 'analytics', iconColor: '#FBBC05', text: 'Analyze', chineseText: '分析' },
+          { icon: 'summarize', iconColor: '#34A853', text: 'Summarize', chineseText: '总结' },
+          { icon: 'auto_awesome', iconColor: '#3b82f6', text: 'Create', chineseText: '创造' },
+          { icon: 'transform', iconColor: '#5f6368', text: 'Transform', chineseText: '转换' },
+          { icon: 'tune', iconColor: '#5f6368', text: 'Personalize', chineseText: '个性化' },
+        ],
+      },
+      {
+        title: 'Key Ethical Considerations',
+        chineseTitle: '关键道德考量',
+        items: [
+          { icon: 'psychology_alt', iconColor: '#EA4335', text: 'Hallucinations', chineseText: '幻觉' },
+          { icon: 'shuffle', iconColor: '#EA4335', text: 'Non-Deterministic', chineseText: '不确定' },
+          { icon: 'balance', iconColor: '#EA4335', text: 'Bias & Fairness', chineseText: '偏见与公平' },
+          { icon: 'privacy_tip', iconColor: '#EA4335', text: 'Data Privacy', chineseText: '数据安全' },
+          { icon: 'person_search', iconColor: '#EA4335', text: 'Human Oversight', chineseText: '人工监督' },
+        ],
+      },
+    ],
+    applications: [
+        { icon: 'campaign', name: 'Marketing' },
+        { icon: 'support_agent', name: 'Service' },
+        { icon: 'groups', name: 'HR' },
+        { icon: 'bar_chart', name: 'Data' },
+        { icon: 'palette', name: 'Design' },
+        { icon: 'podcasts', name: 'PR' },
+        { icon: 'gavel', name: 'Legal' },
+        { icon: 'local_shipping', name: 'Logistics' },
+        { icon: 'school', name: 'Education' },
+        { icon: 'science', name: 'R&D' },
+        { icon: 'compass_calibration', name: 'Strategy' },
+        { icon: 'settings_suggest', name: 'Operations' },
+    ],
+    workflow: [
+      { icon: 'input', label: 'Input', chineseLabel: '输入' },
+      { icon: 'auto_awesome', label: 'AI Model', chineseLabel: 'AI 模型' },
+      { icon: 'article', label: 'Output', chineseLabel: '输出' },
+      { icon: 'person_search', label: 'Human Review', chineseLabel: '人工审核' },
+      { icon: 'rocket_launch', label: 'Action', chineseLabel: '执行' },
+    ]
   },
 ];
