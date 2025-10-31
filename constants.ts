@@ -13,9 +13,9 @@ export const SLIDES: SlideData[] = [
     chineseTitle: '你早已在使用传统人工智能',
     columns: [
       {
-        icon: 'local_taxi',
-        title: 'Grab: Analyzes ride patterns to match you faster.',
-        chineseTitle: 'Grab: 分析出行模式，更快匹配车辆。',
+        icon: 'smart_display',
+        title: "TikTok: Learns what you watch to create your 'For You' page.",
+        chineseTitle: 'TikTok: 学习你的观看喜好，打造你的“推荐”页面。',
       },
       {
         icon: 'credit_card_off',
