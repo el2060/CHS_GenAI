@@ -225,4 +225,33 @@ export const SLIDES: SlideData[] = [
       { icon: 'rocket_launch', label: 'Action', chineseLabel: '执行' },
     ]
   },
+  {
+    template: SlideTemplate.Agenda,
+    title: 'Next-Up: AWS PartyRock',
+    subtitle: 'Intro + Hands-On Creation',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png',
+    agendaColumns: [
+      {
+        icon: '🚀',
+        title: 'What is AWS PartyRock',
+        items: [
+          { text: 'A simple, no-code platform by AWS to build Generative AI apps' },
+          { text: 'Combine text, image, and logic blocks to create interactive tools' }
+        ]
+      },
+      {
+        icon: '🧠',
+        title: 'What You’ll Do Next',
+        isOrdered: true,
+        items: [
+          { text: 'Learn key features of PartyRock' },
+          { text: 'Identify a business use case' },
+          { text: 'Plan key functions & user flow' },
+          { text: 'Build and customise your own AI-powered app' }
+        ]
+      }
+    ],
+    footer: 'From concept to creation — start building your AI app idea with PartyRock.',
+    chineseFooter: '💬'
+  },
 ];

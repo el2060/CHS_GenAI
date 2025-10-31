@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { SLIDES } from './constants';
-import { SlideData, SlideTemplate, ThreeColumnItem, ComparisonColumn, CardListItem, InfographicSection, InfographicApplication, WorkflowStep } from './types';
+import { SlideData, SlideTemplate, ThreeColumnItem, ComparisonColumn, CardListItem, InfographicSection, InfographicApplication, WorkflowStep, AgendaColumn } from './types';
 
 // Helper to parse and highlight keywords in footer text
 const renderFooterSpans = (text: string = "") => {
@@ -261,13 +261,59 @@ const InfographicSummarySlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
   </div>
 );
 
+const AgendaSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
+  <div className="relative w-full h-full flex flex-col items-center justify-center p-12">
+    {slide.logoUrl && (
+      <img src={slide.logoUrl} alt="Logo" className="absolute top-12 right-12 h-16 w-auto" />
+    )}
+    <div className="text-center mb-12">
+      <h1 className="text-5xl md:text-6xl font-bold text-foreground tracking-tight">{slide.title}</h1>
+      <h2 className="text-3xl md:text-4xl font-medium text-muted-foreground mt-2">{slide.subtitle}</h2>
+    </div>
+    <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-8 self-center">
+      {(slide.agendaColumns as AgendaColumn[])?.map((col, index) => (
+        <div key={index} className="bg-card border border-border rounded-2xl p-8 h-full">
+          <h3 className="text-3xl font-semibold text-primary mb-6 flex items-center">
+            <span className="text-4xl mr-4">{col.icon}</span>
+            {col.title}
+          </h3>
+          {col.isOrdered ? (
+            <ol className="list-decimal list-inside space-y-4 text-2xl text-foreground">
+              {col.items.map((item, itemIndex) => (
+                <li key={itemIndex}>{item.text}</li>
+              ))}
+            </ol>
+          ) : (
+            <ul className="space-y-4 text-2xl text-foreground">
+              {col.items.map((item, itemIndex) => (
+                <li key={itemIndex} className="flex items-start">
+                  <span className="material-icons-outlined text-primary mr-3 mt-1">check_circle_outline</span>
+                  <span>{item.text}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))}
+    </div>
+    {slide.footer && (
+        <div className="mt-12 text-center w-full max-w-7xl">
+            <p className="text-3xl text-muted-foreground italic">
+                <span className="mr-2">{slide.chineseFooter}</span>
+                {slide.footer}
+            </p>
+        </div>
+    )}
+  </div>
+);
+
 
 // --- Main Slide Renderer ---
 
 const SlideComponent: React.FC<{ slide: SlideData; isActive: boolean; slideIndex: number }> = ({ slide, isActive, slideIndex }) => {
   const baseClasses = "absolute w-full h-full p-8 md:p-12 box-border flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out";
   const activeClasses = isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none";
-  const hasFooter = slide.footer || slide.chineseFooter;
+  const hasFooter = (slide.footer || slide.chineseFooter) && slideIndex !== 0 && slide.template !== SlideTemplate.Agenda;
 
   const renderSlideContent = () => {
     switch (slide.template) {
@@ -277,16 +323,17 @@ const SlideComponent: React.FC<{ slide: SlideData; isActive: boolean; slideIndex
       case SlideTemplate.Diagram: return <DiagramSlide slide={slide} />;
       case SlideTemplate.CardList: return <CardListSlide slide={slide} />;
       case SlideTemplate.InfographicSummary: return <InfographicSummarySlide slide={slide} />;
+      case SlideTemplate.Agenda: return <AgendaSlide slide={slide} />;
       default: return <div>Unknown Slide Type</div>;
     }
   };
 
   return (
     <div className={`${baseClasses} ${activeClasses}`}>
-      <div className={`w-full h-full flex flex-col items-center justify-center ${hasFooter && slideIndex !== 0 ? 'pb-20' : ''}`}>
+      <div className={`w-full h-full flex flex-col items-center justify-center ${hasFooter ? 'pb-20' : ''}`}>
         {renderSlideContent()}
       </div>
-      {hasFooter && slideIndex !== 0 && (
+      {hasFooter && (
         <footer className="absolute bottom-10 md:bottom-12 w-full text-center">
           <p className="text-2xl md:text-3xl text-muted-foreground">{renderFooterSpans(slide.footer)}</p>
           <p className="text-xl md:text-2xl text-muted-foreground mt-1">{slide.chineseFooter}</p>

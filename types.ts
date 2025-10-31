@@ -5,6 +5,7 @@ export enum SlideTemplate {
   Diagram = 'Diagram',
   CardList = 'CardList',
   InfographicSummary = 'InfographicSummary',
+  Agenda = 'Agenda',
 }
 
 export interface ThreeColumnItem {
@@ -56,6 +57,17 @@ export interface WorkflowStep {
   chineseLabel: string;
 }
 
+export interface AgendaColumnItem {
+    text: string;
+}
+
+export interface AgendaColumn {
+    icon: string;
+    title: string;
+    items: AgendaColumnItem[];
+    isOrdered?: boolean;
+}
+
 export interface SlideData {
   template: SlideTemplate;
   title?: string;
@@ -72,4 +84,6 @@ export interface SlideData {
   infographicSections?: InfographicSection[];
   applications?: InfographicApplication[];
   workflow?: WorkflowStep[];
+  logoUrl?: string;
+  agendaColumns?: AgendaColumn[];
 }
