@@ -10,6 +10,30 @@ export const SLIDES: SlideData[] = [
     chineseFooter: '6 Nov, 10AM · 56-06-01',
   },
   {
+    template: SlideTemplate.Agenda,
+    title: 'Workshop Outline',
+    agendaColumns: [
+      {
+        icon: '💼',
+        title: 'Part 1 – Generative AI in Business',
+        items: [
+          { text: 'Overview of Gen AI concepts & business use cases', icon: 'psychology' },
+          { text: 'Quick demos using Google Gemini', icon: 'bolt' }
+        ]
+      },
+      {
+        icon: '⚙️',
+        title: 'Part 2 – AWS PartyRock Hands-On',
+        items: [
+          { text: 'Intro to AWS PartyRock features', icon: 'dynamic_feed' },
+          { text: 'Guided build: create your own AI-powered app', icon: 'construction' }
+        ]
+      }
+    ],
+    footer: 'From learning → to creating your own AI business app.',
+    chineseFooter: '💡'
+  },
+  {
     template: SlideTemplate.ThreeColumnIcon,
     title: 'You Already Use Traditional AI',
     chineseTitle: '你早已在使用传统人工智能',

@@ -59,6 +59,7 @@ export interface WorkflowStep {
 
 export interface AgendaColumnItem {
     text: string;
+    icon?: string;
 }
 
 export interface AgendaColumn {

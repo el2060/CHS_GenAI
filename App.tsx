@@ -270,35 +270,44 @@ const AgendaSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
       <h1 className="text-5xl md:text-6xl font-bold text-foreground tracking-tight">{slide.title}</h1>
       <h2 className="text-3xl md:text-4xl font-medium text-muted-foreground mt-2">{slide.subtitle}</h2>
     </div>
-    <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-8 self-center">
+    <div className="w-full max-w-7xl flex flex-row items-stretch justify-center gap-6 self-center">
       {(slide.agendaColumns as AgendaColumn[])?.map((col, index) => (
-        <div key={index} className="bg-card border border-border rounded-2xl p-8 h-full">
-          <h3 className="text-3xl font-semibold text-primary mb-6 flex items-center">
-            <span className="text-4xl mr-4">{col.icon}</span>
-            {col.title}
-          </h3>
-          {col.isOrdered ? (
-            <ol className="list-decimal list-inside space-y-4 text-2xl text-foreground">
-              {col.items.map((item, itemIndex) => (
-                <li key={itemIndex}>{item.text}</li>
-              ))}
-            </ol>
-          ) : (
-            <ul className="space-y-4 text-2xl text-foreground">
-              {col.items.map((item, itemIndex) => (
-                <li key={itemIndex} className="flex items-start">
-                  <span className="material-icons-outlined text-primary mr-3 mt-1">check_circle_outline</span>
-                  <span>{item.text}</span>
-                </li>
-              ))}
-            </ul>
+        <React.Fragment key={index}>
+          <div className="bg-card border border-border rounded-2xl p-8 flex-1">
+            <h3 className="text-4xl font-semibold text-primary mb-8 flex items-center">
+              <span className="text-5xl mr-4">{col.icon}</span>
+              {col.title}
+            </h3>
+            {col.isOrdered ? (
+              <ol className="list-decimal list-inside space-y-5 text-2xl text-foreground">
+                {col.items.map((item, itemIndex) => (
+                  <li key={itemIndex}>{item.text}</li>
+                ))}
+              </ol>
+            ) : (
+              <ul className="space-y-5 text-2xl text-foreground">
+                {col.items.map((item, itemIndex) => (
+                  <li key={itemIndex} className="flex items-start">
+                    <span className="material-icons-outlined text-primary mr-4 mt-1">
+                      {item.icon || 'check_circle_outline'}
+                    </span>
+                    <span>{item.text}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+          {index === 0 && (slide.agendaColumns?.length ?? 0) > 1 && (
+            <div className="flex items-center justify-center">
+              <span className="material-icons-outlined text-7xl text-muted-foreground/50">arrow_forward</span>
+            </div>
           )}
-        </div>
+        </React.Fragment>
       ))}
     </div>
     {slide.footer && (
         <div className="mt-12 text-center w-full max-w-7xl">
-            <p className="text-3xl text-muted-foreground italic">
+            <p className="text-2xl text-muted-foreground/80 italic">
                 <span className="mr-2">{slide.chineseFooter}</span>
                 {slide.footer}
             </p>
