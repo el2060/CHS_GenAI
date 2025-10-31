@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback } from 'react';
 import { SLIDES } from './constants';
 import { SlideData, SlideTemplate, ThreeColumnItem, ComparisonColumn, CardListItem } from './types';
@@ -20,8 +21,15 @@ const renderFooterSpans = (text: string = "") => {
 
 // --- Slide Templates ---
 
-const TitleSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
+const TitleSlide: React.FC<{ slide: SlideData; slideIndex?: number }> = ({ slide, slideIndex }) => (
   <div className="flex flex-col items-center justify-center text-center">
+    {slideIndex === 0 && (
+      <img
+        src="https://www.moe.gov.sg/-/media/images/school-logos/post-secondary/ngee-ann-polytechnic.jpg?h=353&w=1274&hash=C05014A86C88B66446A2D9D4CF9FC62F"
+        alt="Ngee Ann Polytechnic Logo"
+        className="h-20 w-auto mb-12"
+      />
+    )}
     <h1 className="text-8xl font-medium m-0 text-text-primary">{slide.title}</h1>
     <h2 className="text-5xl font-normal text-accent-blue mt-4">{slide.subtitle}</h2>
     <p className="text-3xl text-text-secondary mt-2">{slide.chineseSubtitle}</p>
@@ -145,14 +153,14 @@ const CardListSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
 
 // --- Main Slide Renderer ---
 
-const SlideComponent: React.FC<{ slide: SlideData; isActive: boolean }> = ({ slide, isActive }) => {
+const SlideComponent: React.FC<{ slide: SlideData; isActive: boolean; slideIndex: number }> = ({ slide, isActive, slideIndex }) => {
   const baseClasses = "absolute w-full h-full p-12 box-border flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out";
   const activeClasses = isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none";
   const hasFooter = slide.footer || slide.chineseFooter;
 
   const renderSlideContent = () => {
     switch (slide.template) {
-      case SlideTemplate.Title: return <TitleSlide slide={slide} />;
+      case SlideTemplate.Title: return <TitleSlide slide={slide} slideIndex={slideIndex} />;
       case SlideTemplate.ThreeColumnIcon: return <ThreeColumnIconSlide slide={slide} />;
       case SlideTemplate.Comparison: return <ComparisonSlide slide={slide} />;
       case SlideTemplate.Diagram: return <DiagramSlide slide={slide} />;
@@ -227,9 +235,9 @@ const App: React.FC = () => {
 
 
   return (
-    <div className="relative w-full h-full overflow-hidden bg-white">
+    <div className="relative w-screen h-screen overflow-hidden bg-[#f8f9fa]">
       {SLIDES.map((slide, index) => (
-        <SlideComponent key={index} slide={slide} isActive={index === currentSlide} />
+        <SlideComponent key={index} slide={slide} isActive={index === currentSlide} slideIndex={index} />
       ))}
       
       {/* Navigation Arrows */}
