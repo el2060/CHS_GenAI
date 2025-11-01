@@ -18,6 +18,20 @@ const renderFooterSpans = (text: string = "") => {
   );
 };
 
+// Helper to highlight the last phrase of a challenge question
+const HighlightLastPhrase: React.FC<{ text?: string; separator?: string }> = ({ text = "", separator = '...' }) => {
+    const parts = text.split(separator);
+    if (parts.length < 2) {
+        return <>{text}</>;
+    }
+    return (
+        <>
+            {parts[0]}{separator}
+            <span className="text-primary">{parts[1]}</span>
+        </>
+    );
+};
+
 // --- Slide Templates ---
 
 const TitleSlide: React.FC<{ slide: SlideData; slideIndex?: number }> = ({ slide, slideIndex }) => {
@@ -151,6 +165,20 @@ const DiagramSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
             </div>
         </div>
     </div>
+);
+
+const ChallengeSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
+  <div className="w-full h-full flex flex-col items-center justify-center text-center p-8 fade-in">
+    <span className="material-icons-outlined text-[10rem] mb-12" style={{ color: slide.iconColor || '#3b82f6' }}>
+      {slide.icon}
+    </span>
+    <h1 className="text-5xl md:text-7xl font-bold text-foreground tracking-tight">
+      <HighlightLastPhrase text={slide.title} />
+    </h1>
+    <h2 className="text-3xl md:text-5xl font-medium text-muted-foreground mt-6">
+      <HighlightLastPhrase text={slide.chineseTitle} />
+    </h2>
+  </div>
 );
 
 const CardListSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
@@ -379,6 +407,7 @@ const SlideComponent: React.FC<{ slide: SlideData; isActive: boolean; slideIndex
       case SlideTemplate.ThreeColumnIcon: return <ThreeColumnIconSlide slide={slide} />;
       case SlideTemplate.Comparison: return <ComparisonSlide slide={slide} />;
       case SlideTemplate.Diagram: return <DiagramSlide slide={slide} />;
+      case SlideTemplate.Challenge: return <ChallengeSlide slide={slide} />;
       case SlideTemplate.CardList: return <CardListSlide slide={slide} />;
       case SlideTemplate.InfographicSummary: return <InfographicSummarySlide slide={slide} />;
       case SlideTemplate.Agenda: return <AgendaSlide slide={slide} />;

@@ -121,6 +121,13 @@ export const SLIDES: SlideData[] = [
     chineseTitle: '从工具到队友',
   },
   {
+    template: SlideTemplate.Challenge,
+    title: 'How might we... generate creative marketing ideas?',
+    chineseTitle: '我们如何... 生成创意营销内容？',
+    icon: 'campaign',
+    iconColor: '#4285F4',
+  },
+  {
     template: SlideTemplate.CardList,
     title: 'Marketing',
     chineseTitle: '市场营销',
@@ -131,6 +138,13 @@ export const SLIDES: SlideData[] = [
       { title: 'Write', chineseTitle: '撰写', text: "Instagram captions for Shopee's 11.11 sale.", chineseText: '为 Shopee 的 11.11 促销撰写 Instagram 标题。' },
       { title: 'Target', chineseTitle: '定位', text: "Generate 10 different Facebook ad versions for bubble tea: 5 targeting students with 'study break' themes, and 5 targeting parents with 'treat your kids' messaging.", chineseText: '为珍珠奶茶生成 10 个不同版本的 Facebook 广告：5 个以“学习小憩”为主题面向学生，5 个以“犒劳孩子”为主题面向家长。' },
     ],
+  },
+  {
+    template: SlideTemplate.Challenge,
+    title: 'How might we... speed up customer communications?',
+    chineseTitle: '我们如何... 加快客户沟通？',
+    icon: 'support_agent',
+    iconColor: '#5f6368',
   },
   {
     template: SlideTemplate.CardList,
@@ -145,6 +159,13 @@ export const SLIDES: SlideData[] = [
     ],
   },
   {
+    template: SlideTemplate.Challenge,
+    title: 'How might we... streamline HR & employee comms?',
+    chineseTitle: '我们如何... 简化人力资源与员工沟通？',
+    icon: 'groups',
+    iconColor: '#5f6368',
+  },
+  {
     template: SlideTemplate.CardList,
     title: 'Human Resources',
     chineseTitle: '人力资源',
@@ -155,6 +176,13 @@ export const SLIDES: SlideData[] = [
       { title: 'Train', chineseTitle: '培训', text: 'Script for a new part-timer orientation video.', chineseText: '为新的兼职员工创作培训视频脚本。' },
       { title: 'Engage', chineseTitle: '互动', text: 'Fun, bilingual email for an office movie night.', chineseText: '为办公室电影之夜草拟一封有趣的双语邮件。' },
     ],
+  },
+  {
+    template: SlideTemplate.Challenge,
+    title: 'How might we... translate data into clear insights?',
+    chineseTitle: '我们如何... 将数据转化为清晰洞见？',
+    icon: 'bar_chart',
+    iconColor: '#34A853',
   },
    {
     template: SlideTemplate.CardList,
@@ -169,6 +197,13 @@ export const SLIDES: SlideData[] = [
     ],
   },
   {
+    template: SlideTemplate.Challenge,
+    title: 'How might we... streamline logistics reporting & comms?',
+    chineseTitle: '我们如何... 简化物流报告与沟通？',
+    icon: 'local_shipping',
+    iconColor: '#5f6368',
+  },
+  {
     template: SlideTemplate.CardList,
     title: 'Logistics',
     chineseTitle: '物流运营',
@@ -179,6 +214,13 @@ export const SLIDES: SlideData[] = [
       { title: 'Plan', chineseTitle: '规划', text: 'Draft a contingency plan for a surge in holiday deliveries.', chineseText: '为应对节假日激增的送货量草拟一份应急预案。' },
       { title: 'Communicate', chineseTitle: '沟通', text: 'Email to a customer about a delayed parcel.', chineseText: '给客户写一封关于包裹延迟的邮件。' },
     ],
+  },
+  {
+    template: SlideTemplate.Challenge,
+    title: 'How might we... accelerate market research & analysis?',
+    chineseTitle: '我们如何... 加速市场研究与分析？',
+    icon: 'compass_calibration',
+    iconColor: '#5f6368',
   },
   {
     template: SlideTemplate.CardList,
@@ -193,6 +235,13 @@ export const SLIDES: SlideData[] = [
     ],
   },
   {
+    template: SlideTemplate.Challenge,
+    title: 'How might we... generate creative ideas for new products?',
+    chineseTitle: '我们如何... 为新产品生成创意？',
+    icon: 'palette',
+    iconColor: '#EA4335',
+  },
+  {
     template: SlideTemplate.CardList,
     title: 'Product Design',
     chineseTitle: '产品设计',
@@ -205,6 +254,13 @@ export const SLIDES: SlideData[] = [
     ],
   },
   {
+    template: SlideTemplate.Challenge,
+    title: 'How might we... quickly draft public relations content?',
+    chineseTitle: '我们如何... 快速草拟公关内容？',
+    icon: 'podcasts',
+    iconColor: '#5f6368',
+  },
+  {
     template: SlideTemplate.CardList,
     title: 'Public Relations',
     chineseTitle: '公共关系',
@@ -215,6 +271,13 @@ export const SLIDES: SlideData[] = [
       { title: 'Press Release', chineseTitle: '新闻稿', text: "Write a press release announcing a local kopi shop won 'Best Coffee in Asia'.", chineseText: '撰写一篇新闻稿，宣布一家本地咖啡店荣获“亚洲最佳咖啡”奖。' },
       { title: 'Speechwriting', chineseTitle: '演讲稿', text: "Write a 1-minute opening speech for a CEO at a launch event.", chineseText: '为 CEO 在新品发布会上的开幕致辞撰写一份 1 分钟的演讲稿。' },
     ],
+  },
+  {
+    template: SlideTemplate.Challenge,
+    title: 'How might we... make legal language easier to understand?',
+    chineseTitle: '我们如何... 让法律语言更易懂？',
+    icon: 'gavel',
+    iconColor: '#5f6368',
   },
   {
     template: SlideTemplate.CardList,

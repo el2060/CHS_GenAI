@@ -7,6 +7,7 @@ export enum SlideTemplate {
   InfographicSummary = 'InfographicSummary',
   Agenda = 'Agenda',
   Quiz = 'Quiz',
+  Challenge = 'Challenge',
 }
 
 export interface ThreeColumnItem {
