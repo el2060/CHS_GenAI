@@ -316,6 +316,55 @@ const AgendaSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
   </div>
 );
 
+const QuizSlide: React.FC<{ slide: SlideData }> = ({ slide }) => {
+  const CHOICES = ['Traditional AI', 'Generative AI'];
+  const { quizIcon, scenario, isAnswerSlide, correctAnswer, explanation } = slide;
+
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center text-center p-8">
+      <h1 className="text-5xl md:text-6xl font-bold text-foreground tracking-tight mb-8">
+        Traditional AI <span className="text-muted-foreground/60 mx-2">or</span> Generative AI?
+      </h1>
+      
+      <div className="bg-card border border-border rounded-2xl p-6 shadow-lg mb-8 w-full max-w-5xl flex items-center space-x-8">
+        <div className="w-64 h-48 flex-shrink-0 flex items-center justify-center bg-muted rounded-lg border border-border">
+            <span className="material-icons-outlined text-9xl text-primary">{quizIcon}</span>
+        </div>
+        <p className="text-3xl font-medium text-foreground text-left flex-1 leading-snug">{scenario}</p>
+      </div>
+
+      <div className="flex items-center justify-center gap-8 w-full max-w-5xl">
+        {CHOICES.map(choice => {
+          let buttonClasses = "text-3xl font-semibold py-6 px-12 rounded-full border-4 transition-all duration-300 w-1/2 flex items-center justify-center gap-4 ";
+          if (isAnswerSlide) {
+            if (choice === correctAnswer) {
+              buttonClasses += "bg-green-100 border-green-500 text-green-800 scale-105 shadow-lg ring-4 ring-green-200";
+            } else {
+              buttonClasses += "bg-gray-100 border-gray-300 text-gray-500 opacity-60";
+            }
+          } else {
+            buttonClasses += "bg-card border-border hover:bg-muted hover:border-primary cursor-pointer";
+          }
+          return <button key={choice} className={buttonClasses} disabled={isAnswerSlide}>
+            {choice === 'Traditional AI' ? <span className="material-icons-outlined">search</span> : <span className="material-icons-outlined">auto_awesome</span>}
+            {choice}
+          </button>;
+        })}
+      </div>
+
+      {isAnswerSlide && (
+        <div className="mt-10 bg-blue-50 border-2 border-primary/30 rounded-2xl p-6 w-full max-w-5xl text-left flex items-start fade-in" style={{ animationDelay: '0.2s' }}>
+          <span className="material-icons-outlined text-5xl text-primary mr-4">lightbulb</span>
+          <div>
+            <h3 className="text-3xl font-bold text-primary">{correctAnswer}</h3>
+            <p className="text-2xl text-foreground mt-1">{renderFooterSpans(explanation)}</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 
 // --- Main Slide Renderer ---
 
@@ -333,6 +382,7 @@ const SlideComponent: React.FC<{ slide: SlideData; isActive: boolean; slideIndex
       case SlideTemplate.CardList: return <CardListSlide slide={slide} />;
       case SlideTemplate.InfographicSummary: return <InfographicSummarySlide slide={slide} />;
       case SlideTemplate.Agenda: return <AgendaSlide slide={slide} />;
+      case SlideTemplate.Quiz: return <QuizSlide slide={slide} />;
       default: return <div>Unknown Slide Type</div>;
     }
   };

@@ -6,6 +6,7 @@ export enum SlideTemplate {
   CardList = 'CardList',
   InfographicSummary = 'InfographicSummary',
   Agenda = 'Agenda',
+  Quiz = 'Quiz',
 }
 
 export interface ThreeColumnItem {
@@ -87,4 +88,10 @@ export interface SlideData {
   workflow?: WorkflowStep[];
   logoUrl?: string;
   agendaColumns?: AgendaColumn[];
+  // Quiz specific properties
+  quizIcon?: string;
+  scenario?: string;
+  isAnswerSlide?: boolean;
+  correctAnswer?: 'Traditional AI' | 'Generative AI';
+  explanation?: string;
 }
