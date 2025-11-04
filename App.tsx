@@ -206,24 +206,24 @@ const CardListSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
 );
 
 const InfographicSummarySlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
-  <div className="w-full h-full flex flex-col items-center justify-center p-8">
-    <div className="text-center mb-8">
-      <h1 className="text-5xl md:text-6xl font-bold text-foreground tracking-tight">{slide.title}</h1>
-      <h2 className="text-3xl md:text-4xl font-medium text-muted-foreground mt-2">{slide.chineseTitle}</h2>
+  <div className="w-full h-full flex flex-col items-center justify-center p-4">
+    <div className="text-center mb-4">
+      <h1 className="text-4xl md:text-5xl font-bold text-foreground tracking-tight">{slide.title}</h1>
+      <h2 className="text-2xl md:text-3xl font-medium text-muted-foreground mt-1">{slide.chineseTitle}</h2>
     </div>
 
-    <div className="w-full max-w-8xl grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+    <div className="w-full max-w-8xl grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
       {/* Column 1: Capabilities */}
-      <div className="bg-card border border-border rounded-2xl p-8 h-full">
-        <h3 className="text-3xl font-semibold text-primary text-center mb-4">{slide.infographicSections?.[0].title}</h3>
-        <p className="text-xl text-muted-foreground text-center mb-8">{slide.infographicSections?.[0].chineseTitle}</p>
-        <div className="space-y-6">
+      <div className="bg-card border border-border rounded-2xl p-6 h-full">
+        <h3 className="text-2xl font-semibold text-primary text-center mb-2">{slide.infographicSections?.[0].title}</h3>
+        <p className="text-lg text-muted-foreground text-center mb-4">{slide.infographicSections?.[0].chineseTitle}</p>
+        <div className="space-y-3">
           {slide.infographicSections?.[0].items.map((item, index) => (
-            <div key={index} className="flex items-center bg-muted/50 p-4 rounded-lg">
-              <span className="material-icons-outlined text-6xl mr-5" style={{ color: item.iconColor }}>{item.icon}</span>
+            <div key={index} className="flex items-center bg-muted/50 p-3 rounded-lg">
+              <span className="material-icons-outlined text-5xl mr-4" style={{ color: item.iconColor }}>{item.icon}</span>
               <div>
-                <p className="text-3xl font-medium text-card-foreground">{item.text}</p>
-                <p className="text-2xl text-muted-foreground">{item.chineseText}</p>
+                <p className="text-2xl font-medium text-card-foreground">{item.text}</p>
+                <p className="text-xl text-muted-foreground">{item.chineseText}</p>
               </div>
             </div>
           ))}
@@ -231,30 +231,30 @@ const InfographicSummarySlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
       </div>
 
       {/* Column 2: Applications */}
-      <div className="bg-card border-2 border-primary rounded-2xl p-8 shadow-lg">
-        <h3 className="text-3xl font-semibold text-primary text-center mb-4">Business Applications</h3>
-        <p className="text-xl text-muted-foreground text-center mb-8">业务应用</p>
-        <div className="grid grid-cols-3 gap-x-6 gap-y-8 text-center">
+      <div className="bg-card border-2 border-primary rounded-2xl p-6 shadow-lg">
+        <h3 className="text-2xl font-semibold text-primary text-center mb-2">Business Applications</h3>
+        <p className="text-lg text-muted-foreground text-center mb-4">业务应用</p>
+        <div className="grid grid-cols-3 gap-x-4 gap-y-2 text-center">
           {(slide.applications as InfographicApplication[])?.map((app, index) => (
-            <div key={index} className="flex flex-col items-center p-2 rounded-lg hover:bg-muted transition-colors duration-200">
-              <span className="material-icons-outlined text-6xl text-muted-foreground">{app.icon}</span>
-              <p className="text-2xl font-medium text-card-foreground mt-2">{app.name}</p>
+            <div key={index} className="flex flex-col items-center p-1 rounded-lg hover:bg-muted transition-colors duration-200">
+              <span className="material-icons-outlined text-5xl text-muted-foreground">{app.icon}</span>
+              <p className="text-xl font-medium text-card-foreground mt-1">{app.name}</p>
             </div>
           ))}
         </div>
       </div>
 
       {/* Column 3: Considerations */}
-      <div className="bg-red-50/50 border border-red-200 rounded-2xl p-8 h-full">
-         <h3 className="text-3xl font-semibold text-accent-red text-center mb-4">{slide.infographicSections?.[1].title}</h3>
-        <p className="text-xl text-muted-foreground text-center mb-8">{slide.infographicSections?.[1].chineseTitle}</p>
-         <div className="space-y-6">
+      <div className="bg-red-50/50 border border-red-200 rounded-2xl p-6 h-full">
+         <h3 className="text-2xl font-semibold text-accent-red text-center mb-2">{slide.infographicSections?.[1].title}</h3>
+        <p className="text-lg text-muted-foreground text-center mb-4">{slide.infographicSections?.[1].chineseTitle}</p>
+         <div className="space-y-3">
           {slide.infographicSections?.[1].items.map((item, index) => (
-            <div key={index} className="flex items-center bg-red-100/60 p-4 rounded-lg">
-              <span className="material-icons-outlined text-6xl mr-5" style={{ color: item.iconColor }}>{item.icon}</span>
+            <div key={index} className="flex items-center bg-red-100/60 p-3 rounded-lg">
+              <span className="material-icons-outlined text-5xl mr-4" style={{ color: item.iconColor }}>{item.icon}</span>
               <div>
-                <p className="text-3xl font-medium text-red-900">{item.text}</p>
-                <p className="text-2xl text-red-700/80">{item.chineseText}</p>
+                <p className="text-2xl font-medium text-red-900">{item.text}</p>
+                <p className="text-xl text-red-700/80">{item.chineseText}</p>
               </div>
             </div>
           ))}
@@ -263,22 +263,22 @@ const InfographicSummarySlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
     </div>
     
     {slide.workflow && (
-      <div className="w-full max-w-8xl mt-8">
-        <div className="bg-card border border-border rounded-2xl p-6">
-            <div className="text-center mb-4">
-            <h3 className="text-2xl font-semibold text-foreground">Process</h3>
-            <p className="text-lg text-muted-foreground">流程</p>
+      <div className="w-full max-w-8xl mt-4">
+        <div className="bg-card border border-border rounded-2xl p-4">
+            <div className="text-center mb-2">
+            <h3 className="text-xl font-semibold text-foreground">Process</h3>
+            <p className="text-base text-muted-foreground">流程</p>
             </div>
             <div className="flex items-center justify-center text-center">
             {(slide.workflow as WorkflowStep[]).map((step, index) => (
                 <React.Fragment key={index}>
-                <div className="flex flex-col items-center px-4">
-                    <span className="material-icons-outlined text-6xl text-primary">{step.icon}</span>
-                    <p className="mt-2 text-xl font-semibold text-foreground">{step.label}</p>
-                    <p className="text-lg text-muted-foreground">{step.chineseLabel}</p>
+                <div className="flex flex-col items-center px-2">
+                    <span className="material-icons-outlined text-5xl text-primary">{step.icon}</span>
+                    <p className="mt-1 text-lg font-semibold text-foreground">{step.label}</p>
+                    <p className="text-base text-muted-foreground">{step.chineseLabel}</p>
                 </div>
                 {index < slide.workflow.length - 1 && (
-                    <span className="material-icons-outlined text-5xl text-muted-foreground/70 mx-4">arrow_forward</span>
+                    <span className="material-icons-outlined text-4xl text-muted-foreground/70 mx-2">arrow_forward</span>
                 )}
                 </React.Fragment>
             ))}
