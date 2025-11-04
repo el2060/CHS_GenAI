@@ -4,7 +4,7 @@ export const SLIDES: SlideData[] = [
   {
     template: SlideTemplate.Title,
     title: 'AI Transformation for Business',
-    subtitle: '生成式 AI 商业应用',
+    subtitle: '人工智能助力商业转型',
     chineseSubtitle: 'Hands-on Workshop — Diploma in CHS',
     chineseFooter: '6 Nov, 10AM · 56-06-01',
   },
@@ -161,7 +161,7 @@ export const SLIDES: SlideData[] = [
   {
     template: SlideTemplate.Challenge,
     title: 'How might we... streamline HR & employee comms?',
-    chineseTitle: '我们如何... 简化人力资源与员工沟通？',
+    chineseTitle: '我们如何... 简化人力资源与员工沟通渠道？',
     icon: 'groups',
     iconColor: '#5f6368',
   },
@@ -180,7 +180,7 @@ export const SLIDES: SlideData[] = [
   {
     template: SlideTemplate.Challenge,
     title: 'How might we... translate data into clear insights?',
-    chineseTitle: '我们如何... 将数据转化为清晰洞见？',
+    chineseTitle: '我们如何... 将数据转化为清晰见解？',
     icon: 'bar_chart',
     iconColor: '#34A853',
   },
@@ -199,14 +199,14 @@ export const SLIDES: SlideData[] = [
   {
     template: SlideTemplate.Challenge,
     title: 'How might we... streamline logistics reporting & comms?',
-    chineseTitle: '我们如何... 简化物流报告与沟通？',
+    chineseTitle: '我们如何... 简化物流报告与沟通流程？',
     icon: 'local_shipping',
     iconColor: '#5f6368',
   },
   {
     template: SlideTemplate.CardList,
     title: 'Logistics',
-    chineseTitle: '物流运营',
+    chineseTitle: '物流',
     icon: 'local_shipping',
     iconColor: '#5f6368',
     cardItems: [
@@ -312,7 +312,7 @@ export const SLIDES: SlideData[] = [
         chineseTitle: '关键道德考量',
         items: [
           { icon: 'psychology_alt', iconColor: '#EA4335', text: 'Hallucinations', chineseText: '幻觉' },
-          { icon: 'shuffle', iconColor: '#EA4335', text: 'Non-Deterministic', chineseText: '不确定' },
+          { icon: 'shuffle', iconColor: '#EA4335', text: 'Non-Deterministic', chineseText: '不确定性' },
           { icon: 'balance', iconColor: '#EA4335', text: 'Bias & Fairness', chineseText: '偏见与公平' },
           { icon: 'privacy_tip', iconColor: '#EA4335', text: 'Data Privacy', chineseText: '数据安全' },
           { icon: 'person_search', iconColor: '#EA4335', text: 'Human Oversight', chineseText: '人工监督' },
