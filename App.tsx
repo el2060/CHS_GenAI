@@ -301,33 +301,31 @@ const AgendaSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
     <div className="w-full max-w-7xl flex flex-row items-stretch justify-center gap-6 self-center">
       {(slide.agendaColumns as AgendaColumn[])?.map((col, index) => (
         <React.Fragment key={index}>
-          <div className="bg-card border border-border rounded-2xl p-8 flex-1">
-            <h3 className="text-4xl font-semibold text-primary mb-8 flex items-center">
-              <span className="text-5xl mr-4">{col.icon}</span>
-              {col.title}
+          <div
+            className="border border-border/50 rounded-2xl p-8 flex-1"
+            style={{ backgroundColor: col.bgColor }}
+          >
+            <h3 className="text-2xl font-medium mb-6 flex items-center">
+              <span className="text-4xl mr-4">{col.icon}</span>
+              <span style={{ color: '#1E40AF' }}>{col.title}</span>
             </h3>
             {col.isOrdered ? (
-              <ol className="list-decimal list-inside space-y-5 text-2xl text-foreground">
+              <ol className="list-decimal list-inside space-y-3 text-lg text-foreground/90 pl-2">
                 {col.items.map((item, itemIndex) => (
                   <li key={itemIndex}>{item.text}</li>
                 ))}
               </ol>
             ) : (
-              <ul className="space-y-5 text-2xl text-foreground">
+              <ul className="list-disc list-inside space-y-3 text-lg text-foreground/90 pl-2">
                 {col.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-start">
-                    <span className="material-icons-outlined text-primary mr-4 mt-1">
-                      {item.icon || 'check_circle_outline'}
-                    </span>
-                    <span>{item.text}</span>
-                  </li>
+                  <li key={itemIndex}>{item.text}</li>
                 ))}
               </ul>
             )}
           </div>
           {index === 0 && (slide.agendaColumns?.length ?? 0) > 1 && (
-            <div className="flex items-center justify-center">
-              <span className="material-icons-outlined text-7xl text-muted-foreground/50">arrow_forward</span>
+            <div className="flex items-center justify-center text-6xl text-muted-foreground/40 font-light px-4">
+              →
             </div>
           )}
         </React.Fragment>

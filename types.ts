@@ -69,6 +69,7 @@ export interface AgendaColumn {
     title: string;
     items: AgendaColumnItem[];
     isOrdered?: boolean;
+    bgColor?: string;
 }
 
 export interface SlideData {

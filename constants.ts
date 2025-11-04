@@ -13,24 +13,26 @@ export const SLIDES: SlideData[] = [
     title: 'Workshop Outline',
     agendaColumns: [
       {
-        icon: '💼',
-        title: 'Part 1 – Generative AI in Business',
+        icon: '💡',
+        title: 'Part 1 – Gen AI in Business',
         items: [
-          { text: 'Overview of Gen AI concepts & business use cases', icon: 'psychology' },
-          { text: 'Quick demos using Google Gemini', icon: 'bolt' }
-        ]
+          { text: 'Key ideas & real-world use cases' },
+          { text: 'Quick demos (Google Gemini)' }
+        ],
+        bgColor: '#E8F0FE',
       },
       {
         icon: '⚙️',
         title: 'Part 2 – AWS PartyRock Hands-On',
         items: [
-          { text: 'Intro to AWS PartyRock features', icon: 'dynamic_feed' },
-          { text: 'Guided build: create your own AI-powered app', icon: 'construction' }
-        ]
+          { text: 'Explore features & workflow' },
+          { text: 'Build your own AI app' }
+        ],
+        bgColor: '#EFE9FB',
       }
     ],
-    footer: 'From learning → to creating your own AI business app.',
-    chineseFooter: '💡'
+    footer: 'From learning → building your own AI business app',
+    chineseFooter: '✨',
   },
   {
     template: SlideTemplate.ThreeColumnIcon,
