@@ -134,8 +134,8 @@ export const SLIDES: SlideData[] = [
     icon: 'campaign',
     iconColor: '#4285F4',
     cardItems: [
-      { title: 'Brainstorm', chineseTitle: '构思', text: "Viral TikTok ideas for LiHO TEA's new drink.", chineseText: '为「LiHO TEA」的新饮品构思病毒式传播的 TikTok 创意。' },
-      { title: 'Write', chineseTitle: '撰写', text: "Instagram captions for Shopee's 11.11 sale.", chineseText: '为 Shopee 的 11.11 促销撰写 Instagram 标题。' },
+      { title: 'Brainstorm', chineseTitle: '构思', text: "Viral TikTok ideas for LiHO TEA's new drink.", chineseText: '用于「LiHO TEA」新饮品的TikTok式快速传播创意' },
+      { title: 'Write', chineseTitle: '撰写', text: "Instagram captions for Shopee's 11.11 sale.", chineseText: '为 Shopee 的 双十一 促销撰写 Instagram 标题。' },
       { title: 'Target', chineseTitle: '定位', text: "Generate 10 different Facebook ad versions for bubble tea: 5 targeting students with 'study break' themes, and 5 targeting parents with 'treat your kids' messaging.", chineseText: '为珍珠奶茶生成 10 个不同版本的 Facebook 广告：5 个以“学习小憩”为主题面向学生，5 个以“犒劳孩子”为主题面向家长。' },
     ],
   },
@@ -286,9 +286,9 @@ export const SLIDES: SlideData[] = [
     icon: 'gavel',
     iconColor: '#5f6368',
     cardItems: [
-      { title: 'Simplify', chineseTitle: '简化', text: 'Summarize a complex PDPA document into 5 simple rules for new staff.', chineseText: '将一份复杂的个人数据保护法文件总结为 5 条给新员工的简单规则。' },
+      { title: 'Simplify', chineseTitle: '简化', text: 'Summarize a complex PDPA document into 5 simple rules for new staff.', chineseText: '将一份复杂的个人数据保护法文件总结为 5 条简单规则给新员工。' },
       { title: 'Draft', chineseTitle: '草拟', text: 'Draft a simple Tenancy Agreement for a HDB room rental.', chineseText: '为组屋房间租赁草拟一份简单的租赁协议。' },
-      { title: 'Localize', chineseTitle: '本地化', text: "Translate a legal warning into Singlish: 'Eh, don't anyhow park here, later kena saman!'", chineseText: '将法律警告翻译成新加坡式英语：“喂，不要乱停车，等下中罚单！”' },
+      { title: 'Localize', chineseTitle: '本地化', text: "Translate a legal warning into Singlish: 'Eh, don't anyhow park here, later kena saman!'", chineseText: '将法律警告翻译成新加坡式英语：“喂，不要乱乱停，等下中三万！”' },
     ],
   },
   {
@@ -303,7 +303,7 @@ export const SLIDES: SlideData[] = [
           { icon: 'analytics', iconColor: '#FBBC05', text: 'Analyze', chineseText: '分析' },
           { icon: 'summarize', iconColor: '#34A853', text: 'Summarize', chineseText: '总结' },
           { icon: 'auto_awesome', iconColor: '#3b82f6', text: 'Create', chineseText: '创造' },
-          { icon: 'transform', iconColor: '#5f6368', text: 'Transform', chineseText: '转换' },
+          { icon: 'transform', iconColor: '#5f6368', text: 'Transform', chineseText: '转型' },
           { icon: 'tune', iconColor: '#5f6368', text: 'Personalize', chineseText: '个性化' },
         ],
       },
