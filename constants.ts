@@ -275,25 +275,6 @@ export const SLIDES: SlideData[] = [
     ],
   },
   {
-    template: SlideTemplate.Challenge,
-    title: 'How might we... make legal language easier to understand?',
-    chineseTitle: '我们如何... 让法律语言更易懂？',
-    icon: 'gavel',
-    iconColor: '#5f6368',
-  },
-  {
-    template: SlideTemplate.CardList,
-    title: 'Legal & Compliance',
-    chineseTitle: '法务与合规',
-    icon: 'gavel',
-    iconColor: '#5f6368',
-    cardItems: [
-      { title: 'Simplify', chineseTitle: '简化', text: 'Summarize a complex PDPA document into 5 simple rules for new staff.', chineseText: '将一份复杂的个人数据保护法文件总结为 5 条简单规则给新员工。' },
-      { title: 'Draft', chineseTitle: '草拟', text: 'Draft a simple Tenancy Agreement for a HDB room rental.', chineseText: '为组屋房间租赁草拟一份简单的租赁协议。' },
-      { title: 'Localize', chineseTitle: '本地化', text: "Translate a legal warning into Singlish: 'Eh, don't anyhow park here, later kena saman!'", chineseText: '将法律警告翻译成新加坡式英语：“喂，不要乱乱停，等下中三万！”' },
-    ],
-  },
-  {
     template: SlideTemplate.InfographicSummary,
     title: 'Generative AI at a Glance',
     chineseTitle: '生成式 AI 概览',
