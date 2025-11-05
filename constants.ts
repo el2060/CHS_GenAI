@@ -219,25 +219,6 @@ export const SLIDES: SlideData[] = [
   },
   {
     template: SlideTemplate.Challenge,
-    title: 'How might we... accelerate market research & analysis?',
-    chineseTitle: '我们如何... 加速市场研究与分析？',
-    icon: 'compass_calibration',
-    iconColor: '#5f6368',
-  },
-  {
-    template: SlideTemplate.CardList,
-    title: 'Strategy',
-    chineseTitle: '商业战略',
-    icon: 'compass_calibration',
-    iconColor: '#5f6368',
-    cardItems: [
-      { title: 'Research', chineseTitle: '研究', text: 'Generate a competitive analysis brief on two new fintech startups in Singapore.', chineseText: '生成一份关于新加坡两家新晋金融科技初创公司的竞争力分析简报。' },
-      { title: 'Analyze', chineseTitle: '分析', text: 'Summarize online customer reviews for Toast Box, identifying the top 3 complaints.', chineseText: '总结 Toast Box 的在线客户评价，并找出三大主要投诉。' },
-      { title: 'Brainstorm', chineseTitle: '构思', text: 'Propose 3 potential brand partnership ideas for a local brand like Charles & Keith.', chineseText: '为 Charles & Keith 这样的本土品牌构思三种潜在的品牌合作方案。' },
-    ],
-  },
-  {
-    template: SlideTemplate.Challenge,
     title: 'How might we... generate creative ideas for new products?',
     chineseTitle: '我们如何... 为新产品生成创意？',
     icon: 'palette',
@@ -253,25 +234,6 @@ export const SLIDES: SlideData[] = [
       { title: 'Visualize', chineseTitle: '构想', text: 'Generate 5 sneaker designs inspired by the Gardens by the Bay Supertrees.', chineseText: '生成 5 款以滨海湾花园超级树为灵感的运动鞋设计。' },
       { title: 'Describe', chineseTitle: '描述', text: "Write a compelling product description for a new 'Pandan-flavour' milk tea.", chineseText: '为一款新的“班兰味”奶茶撰写引人入胜的产品描述。' },
       { title: 'Survey', chineseTitle: '调研', text: 'Create 10 survey questions for feedback on a new mobile app feature.', chineseText: '为新的手机应用功能设计 10 个用户反馈调查问题。' },
-    ],
-  },
-  {
-    template: SlideTemplate.Challenge,
-    title: 'How might we... quickly draft public relations content?',
-    chineseTitle: '我们如何... 快速草拟公关内容？',
-    icon: 'podcasts',
-    iconColor: '#5f6368',
-  },
-  {
-    template: SlideTemplate.CardList,
-    title: 'Public Relations',
-    chineseTitle: '公共关系',
-    icon: 'podcasts',
-    iconColor: '#5f6368',
-    cardItems: [
-      { title: 'Crisis Comms', chineseTitle: '危机公关', text: "Draft a sincere but funny apology for a customer who found a toy cockroach in their chicken rice.", chineseText: '为在鸡饭里发现玩具蟑螂的顾客草拟一份真诚又幽默的公开道歉信。' },
-      { title: 'Press Release', chineseTitle: '新闻稿', text: "Write a press release announcing a local kopi shop won 'Best Coffee in Asia'.", chineseText: '撰写一篇新闻稿，宣布一家本地咖啡店荣获“亚洲最佳咖啡”奖。' },
-      { title: 'Speechwriting', chineseTitle: '演讲稿', text: "Write a 1-minute opening speech for a CEO at a launch event.", chineseText: '为 CEO 在新品发布会上的开幕致辞撰写一份 1 分钟的演讲稿。' },
     ],
   },
   {
