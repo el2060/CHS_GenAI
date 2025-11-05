@@ -17,7 +17,7 @@ export const SLIDES: SlideData[] = [
         title: 'Part 1 – Gen AI in Business',
         items: [
           { text: 'Key ideas & real-world use cases' },
-          { text: 'Quick demos (Google Gemini)' }
+          { text: 'Quick demos' }
         ],
         bgColor: '#E8F0FE',
       },
