@@ -4,9 +4,7 @@ export const SLIDES: SlideData[] = [
   {
     template: SlideTemplate.Title,
     title: 'Gen AI in Facilities Management',
-    subtitle: 'A JTC Workshop',
-    chineseSubtitle: 'Hands-on Workshop — Diploma in CHS',
-    chineseFooter: '6 Nov, 10AM · 56-06-01',
+
   },
   {
     template: SlideTemplate.Agenda,
