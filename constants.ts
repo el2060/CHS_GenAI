@@ -3,8 +3,8 @@ import { SlideData, SlideTemplate } from './types';
 export const SLIDES: SlideData[] = [
   {
     template: SlideTemplate.Title,
-    title: 'AI Transformation for Business',
-    subtitle: '人工智能助力商业转型',
+    title: 'Gen AI in Facilities Management',
+    subtitle: 'A JTC Workshop',
     chineseSubtitle: 'Hands-on Workshop — Diploma in CHS',
     chineseFooter: '6 Nov, 10AM · 56-06-01',
   },
@@ -14,24 +14,15 @@ export const SLIDES: SlideData[] = [
     agendaColumns: [
       {
         icon: '💡',
-        title: 'Part 1 – Gen AI in Business',
+        title: 'Understanding Gen AI in Facilities Management',
         items: [
-          { text: 'Key ideas & real-world use cases' },
-          { text: 'Quick demos' }
+          { text: 'Key concepts of Generative AI' },
+          { text: 'Real-world FM applications' }
         ],
         bgColor: '#E8F0FE',
       },
-      {
-        icon: '⚙️',
-        title: 'Part 2 – AWS PartyRock Hands-On',
-        items: [
-          { text: 'Explore features & workflow' },
-          { text: 'Build your own AI app' }
-        ],
-        bgColor: '#EFE9FB',
-      }
     ],
-    footer: 'From learning → building your own AI business app',
+    footer: 'From learning → applying AI in your work',
     chineseFooter: '✨',
   },
   {
@@ -40,19 +31,19 @@ export const SLIDES: SlideData[] = [
     chineseTitle: '你早已在使用传统人工智能',
     columns: [
       {
-        icon: 'smart_display',
-        title: "TikTok: Learns what you watch to create your 'For You' page.",
-        chineseTitle: 'TikTok: 学习你的观看喜好，打造你的“推荐”页面。',
+        icon: 'sensors',
+        title: "Smart Building Sensors: Monitor real-time data like temperature and occupancy.",
+        chineseTitle: '智能楼宇传感器: 实时监测温度和占用率等数据。',
       },
       {
-        icon: 'credit_card_off',
-        title: 'DBS: Detects irregular patterns to prevent fraud.',
-        chineseTitle: 'DBS: 检测异常模式，防止欺诈。',
+        icon: 'security',
+        title: 'Security Systems: Detect anomalies in CCTV footage to identify potential threats.',
+        chineseTitle: '安防系统: 检测闭路电视录像中的异常情况，识别潜在威胁。',
       },
       {
-        icon: 'recommend',
-        title: 'Spotify: Studies listening habits to recommend music.',
-        chineseTitle: 'Spotify: 研究听歌习惯，推荐音乐。',
+        icon: 'thermostat',
+        title: 'Energy Management: Analyze usage patterns to optimize cooling and lighting.',
+        chineseTitle: '能源管理: 分析使用模式以优化制冷和照明。',
       },
     ],
     footer: 'Traditional AI ANALYZES existing data to find patterns.',
@@ -90,14 +81,14 @@ export const SLIDES: SlideData[] = [
   {
     template: SlideTemplate.Quiz,
     quizIcon: 'receipt_long',
-    scenario: 'The FairPrice app shows you a list of your past purchases to make re-ordering easier.',
+    scenario: 'A dashboard shows real-time energy consumption data from different buildings, highlighting anomalies.',
     isAnswerSlide: false,
     correctAnswer: 'Traditional AI',
   },
   {
     template: SlideTemplate.Quiz,
     quizIcon: 'receipt_long',
-    scenario: 'The FairPrice app shows you a list of your past purchases to make re-ordering easier.',
+    scenario: 'A dashboard shows real-time energy consumption data from different buildings, highlighting anomalies.',
     isAnswerSlide: true,
     correctAnswer: 'Traditional AI',
     explanation: 'It ANALYZES your purchase history (existing data) to create this list for you.',
@@ -105,14 +96,14 @@ export const SLIDES: SlideData[] = [
   {
     template: SlideTemplate.Quiz,
     quizIcon: 'auto_stories',
-    scenario: "Carousell's feature uses your photo to automatically WRITE a product title and description for your listing.",
+    scenario: "An app that generates a work order from a photo of a faulty equipment.",
     isAnswerSlide: false,
     correctAnswer: 'Generative AI',
   },
   {
     template: SlideTemplate.Quiz,
     quizIcon: 'auto_stories',
-    scenario: "Carousell's feature uses your photo to automatically WRITE a product title and description for your listing.",
+    scenario: "An app that generates a work order from a photo of a faulty equipment.",
     isAnswerSlide: true,
     correctAnswer: 'Generative AI',
     explanation: 'It CREATES a new, original product description that didn’t exist before.',
@@ -124,59 +115,71 @@ export const SLIDES: SlideData[] = [
   },
   {
     template: SlideTemplate.Challenge,
-    title: 'How might we... generate creative marketing ideas?',
-    chineseTitle: '我们如何... 生成创意营销内容？',
-    icon: 'campaign',
+    title: 'How might we... automate fault reporting with Gen AI?',
+    chineseTitle: '我们如何... 用生成式AI自动进行故障报告？',
+    icon: 'camera_alt',
     iconColor: '#4285F4',
   },
   {
     template: SlideTemplate.CardList,
-    title: 'Marketing',
-    chineseTitle: '市场营销',
-    icon: 'campaign',
+    title: 'Predictive Maintenance',
+    chineseTitle: '预测性维护',
+    icon: 'build',
     iconColor: '#4285F4',
     cardItems: [
-      { title: 'Brainstorm', chineseTitle: '构思', text: "Viral TikTok ideas for LiHO TEA's new drink.", chineseText: '用于「LiHO TEA」新饮品的TikTok式快速传播创意' },
-      { title: 'Write', chineseTitle: '撰写', text: "Instagram captions for Shopee's 11.11 sale.", chineseText: '为 Shopee 的 双十一 促销撰写 Instagram 标题。' },
-      { title: 'Target', chineseTitle: '定位', text: "Generate 10 different Facebook ad versions for bubble tea: 5 targeting students with 'study break' themes, and 5 targeting parents with 'treat your kids' messaging.", chineseText: '为珍珠奶茶生成 10 个不同版本的 Facebook 广告：5 个以“学习小憩”为主题面向学生，5 个以“犒劳孩子”为主题面向家长。' },
+      { title: 'Forecast', chineseTitle: '预测', text: "Forecast equipment failures based on sensor data.", chineseText: '根据传感器数据预测设备故障。' },
+      { title: 'Recommend', chineseTitle: '推荐', text: "Recommend optimal maintenance schedules.", chineseText: '推荐最佳维护计划。' },
+      { title: 'Automate', chineseTitle: '自动化', text: "Generate alerts for potential issues.", chineseText: '生成潜在问题的警报。' },
     ],
   },
   {
     template: SlideTemplate.Challenge,
-    title: 'How might we... speed up customer communications?',
-    chineseTitle: '我们如何... 加快客户沟通？',
-    icon: 'support_agent',
-    iconColor: '#5f6368',
+    title: 'How might we... optimise smart building energy use?',
+    chineseTitle: '我们如何... 优化智能建筑的能源使用？',
+    icon: 'bolt',
+    iconColor: '#34A853',
   },
   {
     template: SlideTemplate.CardList,
-    title: 'Customer Service',
-    chineseTitle: '客户服务',
-    icon: 'support_agent',
+    title: 'Space Optimisation',
+    chineseTitle: '空间优化',
+    icon: 'space_dashboard',
     iconColor: '#5f6368',
     cardItems: [
-      { title: 'Answer', chineseTitle: '回答', text: 'A Singtel chatbot that understands Singlish.', chineseText: '一个能听懂新加坡式英语的新电信聊天机器人。' },
-      { title: 'Summarize', chineseTitle: '总结', text: 'Summarize an angry GrabFood customer call.', chineseText: '总结一个愤怒的 GrabFood 客户来电。' },
-      { title: 'Draft', chineseTitle: '草拟', text: '5 polite replies for Haidilao booking questions.', chineseText: '为海底捞的预订问题草拟 5 个礼貌回复。' },
+      { title: 'Analyze', chineseTitle: '分析', text: 'Analyze usage data to identify underutilized areas.', chineseText: '分析使用数据以确定未充分利用的区域。' },
+      { title: 'Generate', chineseTitle: '生成', text: 'Generate layout options for different work styles.', chineseText: '为不同的工作方式生成布局选项。' },
+      { title: 'Schedule', chineseTitle: '安排', text: 'Create optimal schedules for shared spaces.', chineseText: '为共享空间创建最佳时间表。' },
     ],
   },
   {
     template: SlideTemplate.Challenge,
-    title: 'How might we... streamline HR & employee comms?',
-    chineseTitle: '我们如何... 简化人力资源与员工沟通渠道？',
-    icon: 'groups',
-    iconColor: '#5f6368',
+    title: 'How might we... summarise and classify tenant feedback with AI?',
+    chineseTitle: '我们如何... 用AI总结和分类租户反馈？',
+    icon: 'rate_review',
+    iconColor: '#FBBC05',
   },
   {
     template: SlideTemplate.CardList,
-    title: 'Human Resources',
-    chineseTitle: '人力资源',
-    icon: 'groups',
+    title: 'Automated Work Order Generation',
+    chineseTitle: '自动工单生成',
+    icon: 'assignment',
     iconColor: '#5f6368',
     cardItems: [
-      { title: 'Recruit', chineseTitle: '招聘', text: "Draft an engaging job post for a retail role at Uniqlo.", chineseText: '为优衣库的零售职位草拟一则引人入胜的招聘启事。' },
-      { title: 'Train', chineseTitle: '培训', text: 'Script for a new part-timer orientation video.', chineseText: '为新的兼职员工创作培训视频脚本。' },
-      { title: 'Engage', chineseTitle: '互动', text: 'Fun, bilingual email for an office movie night.', chineseText: '为办公室电影之夜草拟一封有趣的双语邮件。' },
+      { title: 'Create', chineseTitle: '创建', text: 'Create work orders from images of faulty equipment.', chineseText: '从故障设备图片创建工单。' },
+      { title: 'Assign', chineseTitle: '分配', text: 'Assign work orders to the right teams automatically.', chineseText: '自动将工单分配给合适的团队。' },
+      { title: 'Track', chineseTitle: '跟踪', text: 'Track the status of work orders in real-time.', chineseText: '实时跟踪工单状态。' },
+    ],
+  },
+  {
+    template: SlideTemplate.CardList,
+    title: "JTC's Smart Estates",
+    chineseTitle: '裕廊集团的智能园区',
+    icon: 'apartment',
+    iconColor: '#34A853',
+    cardItems: [
+      { title: 'Digital Twin', chineseTitle: '数字孪生', text: 'Simulate and optimize building performance with a digital twin of the estate.', chineseText: '利用园区的数字孪生来模拟和优化建筑性能。' },
+      { title: 'Green Buildings', chineseTitle: '绿色建筑', text: 'Use AI to manage energy consumption and support sustainability goals.', chineseText: '使用人工智能管理能源消耗，支持可持续发展目标。' },
+      { title: 'Smart Lighting', chineseTitle: '智能照明', text: 'Automate lighting adjustments based on occupancy and time of day.', chineseText: '根据占用情况和时间自动调节照明。' },
     ],
   },
   {
@@ -253,14 +256,14 @@ export const SLIDES: SlideData[] = [
         ],
       },
       {
-        title: 'Key Ethical Considerations',
-        chineseTitle: '关键道德考量',
+        title: 'Ethical Considerations in FM',
+        chineseTitle: '设施管理中的道德考量',
         items: [
+          { icon: 'privacy_tip', iconColor: '#EA4335', text: 'Data Privacy', chineseText: '数据隐私' },
           { icon: 'psychology_alt', iconColor: '#EA4335', text: 'Hallucinations', chineseText: '幻觉' },
-          { icon: 'shuffle', iconColor: '#EA4335', text: 'Non-Deterministic', chineseText: '不确定性' },
           { icon: 'balance', iconColor: '#EA4335', text: 'Bias & Fairness', chineseText: '偏见与公平' },
-          { icon: 'privacy_tip', iconColor: '#EA4335', text: 'Data Privacy', chineseText: '数据安全' },
-          { icon: 'person_search', iconColor: '#EA4335', text: 'Human Oversight', chineseText: '人工监督' },
+          { icon: 'rule', iconColor: '#EA4335', text: 'Automation Bias', chineseText: '自动化偏见' },
+          { icon: 'security', iconColor: '#EA4335', text: 'Safety-Critical Review', chineseText: '安全关键审核' },
         ],
       },
     ],
@@ -288,31 +291,43 @@ export const SLIDES: SlideData[] = [
   },
   {
     template: SlideTemplate.Agenda,
-    title: 'Next-Up: AWS PartyRock',
-    subtitle: 'Intro + Hands-On Creation',
+    title: 'Your Task: Build an FM App',
+    subtitle: 'Hands-On with AWS PartyRock',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png',
     agendaColumns: [
       {
         icon: '🚀',
-        title: 'What is AWS PartyRock',
+        title: 'Your Mission',
         items: [
-          { text: 'A simple, no-code platform by AWS to build Generative AI apps' },
-          { text: 'Combine text, image, and logic blocks to create interactive tools' }
+          { text: 'Build an AI prototype that solves a real-world FM problem.' },
+          { text: 'Think about fault reporting, energy optimisation, or tenant requests.' }
         ]
       },
       {
         icon: '🧠',
-        title: 'What You’ll Do Next',
+        title: 'Your Steps',
         isOrdered: true,
         items: [
-          { text: 'Learn key features of PartyRock' },
-          { text: 'Identify a business use case' },
-          { text: 'Plan key functions & user flow' },
-          { text: 'Build and customise your own AI-powered app' }
+          { text: 'Identify a specific FM problem at JTC.' },
+          { text: 'Plan your app’s features and user flow.' },
+          { text: 'Build a simple prototype using PartyRock.' },
+          { text: 'Present your app to the group.' }
         ]
       }
     ],
-    footer: 'From concept to creation — start building your AI app idea with PartyRock.',
-    chineseFooter: '💬'
+    footer: 'App Ideas: Fault Reporting App, Energy Optimisation Bot, Tenant Request Chatbot.',
+    chineseFooter: '💡'
+  },
+  {
+    template: SlideTemplate.CardList,
+    title: 'Gen AI in JTC Facilities Management',
+    chineseTitle: '生成式AI在裕廊集团设施管理中的应用',
+    icon: 'business_center',
+    iconColor: '#1E40AF',
+    cardItems: [
+      { title: 'Key Takeaways', chineseTitle: '主要收获', text: 'Gen AI can be a powerful teammate for FM, helping to improve efficiency, safety, and tenant experience.', chineseText: '生成式AI可以成为设施管理中强大的队友，帮助提高效率、安全性和租户体验。' },
+      { title: 'Next Steps', chineseTitle: '下一步', text: 'Start small, identify a real-world problem, and build a simple prototype.', chineseText: '从小的、真实世界的问题开始，并构建一个简单的原型。' },
+      { title: 'Call for Pilots', chineseTitle: '试点项目征集', text: 'We are looking for pilot projects to explore the use of Gen AI in our operations. Share your ideas with us!', chineseText: '我们正在寻找试点项目，以探索生成式AI在我们运营中的应用。请与我们分享您的想法！' },
+    ],
   },
 ];

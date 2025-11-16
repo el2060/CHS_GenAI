@@ -43,14 +43,7 @@ const TitleSlide: React.FC<{ slide: SlideData; slideIndex?: number }> = ({ slide
     return (
         <div className="relative w-full h-full flex flex-col items-center justify-center text-center p-8">
             <div className="flex flex-col items-center justify-center">
-                {isFirstSlide && (
-                    <img
-                        src="https://i.imgur.com/bioCfZA.png"
-                        alt="Ngee Ann Polytechnic Logo"
-                        className="h-24 w-auto mb-16 fade-in"
-                        style={{ animationDelay: '1.2s' }}
-                    />
-                )}
+                
                 <h1 className="text-8xl md:text-9xl font-bold m-0 text-foreground tracking-tighter">
                   {isFirstSlide ? titleWords.map((word, index) => (
                       <span key={index} className="token-generate inline-block" style={{ animationDelay: `${0.5 + index * 0.2}s` }}>
@@ -141,24 +134,24 @@ const DiagramSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
             <div className="bg-card border border-border rounded-2xl p-8 shadow-sm">
                 <ul className="text-left space-y-4">
                     <li className="flex items-center">
-                        <span className="material-icons-outlined text-5xl md:text-6xl text-accent-yellow mr-4">lightbulb</span>
+                        <span className="material-icons-outlined text-5xl md:text-6xl text-accent-yellow mr-4">health_and_safety</span>
                         <div>
-                            <p className="font-semibold">New Ideas</p>
-                            <p className="text-2xl md:text-3xl text-muted-foreground">新点子</p>
+                            <p className="font-semibold">Safer Buildings</p>
+                            <p className="text-2xl md:text-3xl text-muted-foreground">更安全的建筑</p>
                         </div>
                     </li>
                     <li className="flex items-center">
-                        <span className="material-icons-outlined text-5xl md:text-6xl text-accent-green mr-4">trending_up</span>
+                        <span className="material-icons-outlined text-5xl md:text-6xl text-accent-green mr-4">speed</span>
                         <div>
-                            <p className="font-semibold">Better Work</p>
-                            <p className="text-2xl md:text-3xl text-muted-foreground">更高效的工作</p>
+                            <p className="font-semibold">Higher Efficiency</p>
+                            <p className="text-2xl md:text-3xl text-muted-foreground">更高效率</p>
                         </div>
                     </li>
                      <li className="flex items-center">
-                        <span className="material-icons-outlined text-5xl md:text-6xl text-accent-red mr-4">rocket_launch</span>
+                        <span className="material-icons-outlined text-5xl md:text-6xl text-accent-red mr-4">groups</span>
                         <div>
-                            <p className="font-semibold">Faster Results</p>
-                            <p className="text-2xl md:text-3xl text-muted-foreground">更快的结果</p>
+                            <p className="font-semibold">Better Tenant Experience</p>
+                            <p className="text-2xl md:text-3xl text-muted-foreground">更好的租户体验</p>
                         </div>
                     </li>
                 </ul>
