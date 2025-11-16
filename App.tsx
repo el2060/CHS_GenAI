@@ -461,7 +461,7 @@ const App: React.FC = () => {
               'background': 'var(--background)',
               'foreground': 'var(--foreground)',
               'primary': {
-                DEFAULT: 'var(--primary)',
+                DEFAULT: '#0055B8',
                 foreground: 'var(--primary-foreground)',
               },
               'card': {
@@ -472,9 +472,9 @@ const App: React.FC = () => {
                 DEFAULT: 'var(--muted)',
                 foreground: 'var(--muted-foreground)',
               },
-              'accent-green': '#34A853',
-              'accent-red': '#EA4335',
-              'accent-yellow': '#FBBC05',
+              'accent-green': '#0077B6',
+              'accent-red': '#D6644C',
+              'accent-yellow': '#FDBE57',
             }
           }
         }
