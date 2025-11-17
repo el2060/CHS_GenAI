@@ -50,6 +50,7 @@ export const SLIDES: SlideData[] = [
   {
     template: SlideTemplate.Diagram,
     title: 'How Gen AI Works: The "Brain"',
+    subtitle: 'Better Workflows & Faster Insights',
   },
   {
     template: SlideTemplate.CardList,

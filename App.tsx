@@ -106,43 +106,43 @@ const ComparisonSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
 
 const DiagramSlide: React.FC<{ slide: SlideData }> = ({ slide }) => (
     <div className="w-full h-full flex flex-col items-center justify-center text-center p-8">
-        <h1 className="text-6xl md:text-7xl font-bold text-foreground tracking-tight">{slide.title}</h1>
+        <div className="mb-12">
+            <h1 className="text-6xl md:text-7xl font-bold text-foreground tracking-tight mb-2">{slide.title}</h1>
+            {slide.subtitle && <p className="text-3xl text-muted-foreground font-light">{slide.subtitle}</p>}
+        </div>
 
-
-        <div className="flex items-center justify-center space-x-8 md:space-x-12 text-3xl md:text-4xl text-foreground">
+        <div className="flex items-center justify-center space-x-12 md:space-x-16 text-3xl md:text-4xl text-foreground">
             <div className="flex flex-col items-center">
                 <span className="material-icons-outlined text-9xl md:text-[10rem] text-muted-foreground">person</span>
-                <p className="font-semibold mt-2 text-4xl">You</p>
-
+                <p className="font-semibold mt-4 text-4xl">You</p>
             </div>
             <p className="text-7xl md:text-8xl text-muted-foreground font-light">+</p>
             <div className="flex flex-col items-center">
                 <span className="material-icons-outlined text-9xl md:text-[10rem] text-primary">auto_awesome</span>
-                <p className="font-semibold mt-2 text-4xl">Gen AI</p>
-
+                <p className="font-semibold mt-4 text-4xl">Gen AI</p>
             </div>
             <p className="text-7xl md:text-8xl text-muted-foreground font-light">=</p>
-            <div className="bg-card border border-border rounded-2xl p-8 shadow-sm">
-                <ul className="text-left space-y-4">
-                    <li className="flex items-center">
-                        <span className="material-icons-outlined text-6xl md:text-7xl text-accent-yellow mr-4">health_and_safety</span>
+            <div className="bg-gradient-to-br from-card to-card/80 border-2 border-primary/20 rounded-3xl p-10 shadow-lg">
+                <ul className="text-left space-y-6">
+                    <li className="flex items-start gap-5">
+                        <span className="material-icons-outlined text-6xl md:text-7xl text-blue-500 flex-shrink-0">search</span>
                         <div>
-                            <p className="font-semibold text-3xl">Safer Buildings</p>
-
+                            <p className="font-semibold text-3xl text-foreground leading-tight">Faster Information Access</p>
+                            <p className="text-xl text-muted-foreground mt-1">Retrieve policies, codes & past cases instantly</p>
                         </div>
                     </li>
-                    <li className="flex items-center">
-                        <span className="material-icons-outlined text-6xl md:text-7xl text-accent-green mr-4">speed</span>
+                    <li className="flex items-start gap-5">
+                        <span className="material-icons-outlined text-6xl md:text-7xl text-emerald-500 flex-shrink-0">description</span>
                         <div>
-                            <p className="font-semibold text-3xl">Higher Efficiency</p>
-
+                            <p className="font-semibold text-3xl text-foreground leading-tight">Quicker Documentation</p>
+                            <p className="text-xl text-muted-foreground mt-1">Draft reports, summaries & SOPs efficiently</p>
                         </div>
                     </li>
-                     <li className="flex items-center">
-                        <span className="material-icons-outlined text-6xl md:text-7xl text-accent-red mr-4">groups</span>
+                     <li className="flex items-start gap-5">
+                        <span className="material-icons-outlined text-6xl md:text-7xl text-purple-500 flex-shrink-0">psychology</span>
                         <div>
-                            <p className="font-semibold text-3xl">Better Tenant Experience</p>
-
+                            <p className="font-semibold text-3xl text-foreground leading-tight">Smarter Decision Support</p>
+                            <p className="text-xl text-muted-foreground mt-1">Generate scenarios & compare options</p>
                         </div>
                     </li>
                 </ul>
