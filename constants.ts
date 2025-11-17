@@ -6,36 +6,20 @@ export const SLIDES: SlideData[] = [
     title: 'Gen AI in Facilities Management',
   },
   {
-    template: SlideTemplate.Agenda,
-    title: 'Workshop Outline',
-    agendaColumns: [
-      {
-        icon: '💡',
-        title: 'Understanding Gen AI in Facilities Management',
-        items: [
-          { text: 'Key concepts of Generative AI' },
-          { text: 'Real-world FM applications' }
-        ],
-        bgColor: '#E8F0FE',
-      },
-    ],
-    footer: 'From learning → applying AI in your work',
-  },
-  {
     template: SlideTemplate.ThreeColumnIcon,
     title: 'You Already Use Traditional AI',
     columns: [
       {
-        icon: 'sensors',
-        title: "JTC's Smart Building Sensors: Monitor real-time data like temperature and occupancy.",
+        icon: 'local_shipping',
+        title: "Grab: Predicts your arrival time based on traffic patterns and historical data.",
       },
       {
-        icon: 'security',
-        title: "JTC's Security Systems: Detect anomalies in CCTV footage to identify potential threats.",
+        icon: 'movie',
+        title: "Netflix: Recommends shows by analyzing what similar users have watched.",
       },
       {
-        icon: 'thermostat',
-        title: "JTC's Energy Management: Analyze usage patterns to optimize cooling and lighting.",
+        icon: 'shopping_bag',
+        title: "Carousell: Suggests prices by analyzing past listings and transactions.",
       },
     ],
     footer: 'Traditional AI ANALYZES existing data to find patterns.',
@@ -47,14 +31,16 @@ export const SLIDES: SlideData[] = [
       {
         icon: 'search',
         iconColor: '#5f6368',
-        title: 'Traditional AI (The Analyst)',
+        title: 'Traditional AI',
+        chineseTitle: '(The Analyst)',
         text: 'FINDS answers in existing data.',
         example: '"Find similar fault reports."',
       },
       {
         icon: 'auto_awesome',
         iconColor: '#0055B8',
-        title: 'Generative AI (The Creator)',
+        title: 'Generative AI',
+        chineseTitle: '(The Creator)',
         text: 'CREATES something totally new.',
         example: '"Create a new maintenance schedule."',
       },
@@ -77,24 +63,7 @@ export const SLIDES: SlideData[] = [
       { title: 'Output', text: 'The AI generates a new, original output based on the prediction.' },
     ],
   },
-  {
-    template: SlideTemplate.ThreeColumnIcon,
-    title: "JTC's Innovative Estates",
-    columns: [
-      {
-        icon: 'https://www.jtc.gov.sg/images/default-source/news-and-publications/featured-stories/2019/one-north-20-years-on/one-north-gallery-1.jpg',
-        title: "one-north",
-      },
-      {
-        icon: 'https://www.jtc.gov.sg/images/default-source/news-and-publications/featured-stories/2021/a-look-at-the-new-punggol-digital-district/pdd-gallery-1.jpg',
-        title: "Punggol Digital District",
-      },
-      {
-        icon: 'https://www.jtc.gov.sg/images/default-source/news-and-publications/featured-stories/2020/jurong-innovation-district-a-place-for-all/jid-gallery-1.jpg',
-        title: "Jurong Innovation District",
-      },
-    ],
-  },
+
   {
     template: SlideTemplate.Quiz,
     quizIcon: 'receipt_long',
@@ -114,7 +83,7 @@ export const SLIDES: SlideData[] = [
     template: SlideTemplate.Quiz,
     quizIcon: 'auto_stories',
     scenario: "An app that generates a work order from a photo of a faulty equipment.",
-    isAnswerSlide: false,.
+    isAnswerSlide: false,
     correctAnswer: 'Generative AI',
   },
   {
@@ -241,8 +210,7 @@ export const SLIDES: SlideData[] = [
   {
     template: SlideTemplate.Agenda,
     title: 'Your Task: Build an FM App',
-    subtitle: 'Hands-On with AWS PartyRock',
-    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png',
+    subtitle: 'Hands-On with No-Code AI Tools',
     agendaColumns: [
       {
         icon: '🚀',
@@ -258,8 +226,8 @@ export const SLIDES: SlideData[] = [
         isOrdered: true,
         items: [
           { text: 'Identify a specific FM problem at JTC.' },
-          { text: 'Plan your app’s features and user flow.' },
-          { text: 'Build a simple prototype using PartyRock.' },
+          { text: 'Plan your app\'s features and user flow.' },
+          { text: 'Build a simple prototype using no-code AI tools.' },
           { text: 'Present your app to the group.' }
         ]
       }
